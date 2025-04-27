@@ -1,0 +1,140 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+.todo-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccef2;
+    width: 50%;
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 30px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+#title {
+    padding: 10px 20px;
+    border: 1px solid #433497;
+    border-radius: 5px;
+    width: 90%
+}
+#description {
+    height: 50px;
+    border: 1px solid #433497;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 90%
+}
+#title:focus, #description:focus {
+    outline: none
+}
+.title_error, .description_error {
+    color:#c63549;
+    margin-bottom: 10px;
+    text-align: start;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 2px;
+    visibility: hidden;
+    
+
+    
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px
+}
+#add {
+    padding: 5px 20px;
+    border: 1px solid #433497;
+    color: #433497;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#update {
+    padding: 5px 20px;
+    border: 1px solid #f57417;
+    color: #f57417;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: none;
+}
+.search {
+    width: 59%;
+    margin: auto;
+}
+.search #search_input {
+    height: 30px;
+    border: 1px solid #433497;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 20px
+}
+.search #search_input:focus {
+    outline: none;
+}
+.elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    width: 53%;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-left: 10px solid #cccef2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #6b67a9
+}
+.element .title {
+    color: #433497;
+}
+.element .icons i {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+.element .icons i:first-child{
+    color: #33b362;
+}
+.element .icons i:nth-child(2){
+    color: #9d90e5
+}
+.element .icons i:last-child{
+    color: #e59fa8;
+}
+
+.element.completed {
+    background-color: #cbf6e9;
+    position: relative;
+
+}
+.element .icons {
+    z-index: 1
+}
+.element.completed::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: #a5aaee;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
