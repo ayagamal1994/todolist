@@ -66,7 +66,7 @@
     display: none;
 }
 .search {
-    width: 59%;
+    width: 45%;
     margin: auto;
 }
 .search #search_input {
@@ -75,7 +75,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     width: 90%;
-    margin-bottom: 20px
+    margin-bottom: 30px
 }
 .search #search_input:focus {
     outline: none;
